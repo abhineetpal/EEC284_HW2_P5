@@ -63,8 +63,8 @@ function [f1, f2] = estimate_carrier_frequencies(signal, Fs)
     i = 2;
 
     while i <= length(fs)
-        if (abs(f_list(fs(i)) - f1) > 1.0)
-            f2 = f_list(fs(i));
+        if (abs(freqs(fs(i)) - f1) > 1.0)
+            f2 = freqs(fs(i));
             break;
         end
         i = i + 1;
